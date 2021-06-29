@@ -194,11 +194,11 @@ th
 
 /*css da pagina inicial*/
 
+
 .banner 
 {
     width: 100%;
 }
-
 
 .titulo-centralizado 
 {
@@ -206,13 +206,7 @@ th
     font-size: 2em;
     margin: 0 0 2em;    
     clear: left;
-}
-
-.utensilios 
-{
-    width: 120px;
-    float: left;
-    margin: 0 20px 20px 0;
+    
 }
 
 .principal 
@@ -221,8 +215,8 @@ th
     background: #FFFFFF;
     width: 940px;    
     margin: 0 auto;
+    
 }
-
 
 .principal p 
 {
@@ -239,11 +233,18 @@ th
     font-style: italic;
 }
 
+.utensilios 
+{
+    width: 120px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
 
 .mapa 
 {
     padding: 3em 0;
-    background: linear-gradient(#FFFFFF, #888888);
+    background: linear-gradient(#FEFEFE, #888888);
 }
 
 .mapa p 
@@ -268,7 +269,7 @@ th
 
 .conteudo-beneficios 
 {
-    width: 680px;
+    width: 640px;
     margin: 0 auto;
 }
 
@@ -283,10 +284,24 @@ th
 .imagem-beneficios 
 {
     width: 60%;
+    opacity: 1;
+    transition: 400ms;
+    box-shadow: 10px 10px 10px 0 #000000;
+
+}
+
+.imagem-beneficios:hover
+{
+    opacity: 0.3;
+}
+
+.itens 
+{
+	line-height: 1.5;
 }
 
 .itens:first-child 
-{    font-weight: bold;
+{   font-weight: bold;
 }
 
 .itens:before 
@@ -295,6 +310,65 @@ th
 
 .video 
 {
-    padding: 2em 0;
-    text-align: center;
+    width: 560px;
+    padding: 3em 0;
+    margin: auto;
+    
 }
+
+@media screen and (max-width: 480px) 
+{
+    .titulo-centralizado {
+        text-align: center;
+        margin: 0em 1em 1em 1em;
+    }
+    
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+    width: auto;
+    margin: 2em;
+}
+    h1 {
+        width: auto;
+        text-align: center;
+       
+    }
+
+    nav {
+        position:static;
+        text-align: auto;
+        padding: 15%;
+    
+    }
+
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+    }
+
+}
+ 
+
+/*@media página "Produtos"*/
+
+@media screen and (max-width: 480px) {
+    .produtos, .produtos li, .produtos h2, .produto-descricao, .produto-preco  {
+    width:auto;
+    margin: 1em;    
+    padding: auto;
+
+    }
+    
+}
+
+/*@media página "Contato"*/ 
+
+@media screen and (max-width: 480px) { 
+    form label, form legend, td,
+    th, thead   {
+        width: auto;
+       margin: auto;
+       padding: 2em 1em 2em 1em;
+    }
+}
+
+
+
